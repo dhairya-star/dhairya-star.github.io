@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page settings -->
+  <meta charset="UTF-8">
+  <!-- Makes the page scale correctly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightPath Learning | Friendly Tutoring for School Students</title>
+  <meta name="description" content="BrightPath Learning is a fictional tutoring business offering one-to-one and small-group lessons in Maths, Science, English and Computer Science. A practice website project.">
+
+  <!-- Our stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Lets keyboard users jump straight past the menu -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== HEADER & NAVIGATION ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">Bright<span>Path</span> Learning</a>
+
+      <!-- This button only shows on small screens -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#subjects">Subjects</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#tutor">Tutor</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#contact" class="btn btn-small">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Tutoring for Classes 6–12</p>
+        <h1>Learn with confidence, one clear step at a time.</h1>
+        <p class="hero-text">
+          BrightPath Learning offers patient, structured lessons that help students
+          understand topics properly — not just memorise them.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn">Send an Enquiry</a>
+          <a href="#subjects" class="btn btn-outline">See Subjects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SUBJECTS ===== -->
+    <section id="subjects" class="section">
+      <div class="container">
+        <h2>Subjects</h2>
+        <p class="section-intro">Lessons can focus on school homework, exam revision, or building strong basics.</p>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Mathematics</h3>
+            <p>Algebra, geometry, trigonometry and calculus, explained step by step with practice questions.</p>
+          </article>
+          <article class="card">
+            <h3>Science</h3>
+            <p>Physics, Chemistry and Biology concepts linked to everyday examples and diagrams.</p>
+          </article>
+          <article class="card">
+            <h3>English</h3>
+            <p>Reading, grammar, and writing skills for essays, letters and comprehension.</p>
+          </article>
+          <article class="card">
+            <h3>Computer Science</h3>
+            <p>Programming basics, problem-solving, and school-level Python or C++.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section id="how-it-works" class="section section-alt">
+      <div class="container">
+        <h2>How It Works</h2>
+        <p class="section-intro">Getting started is simple.</p>
+
+        <!-- An ordered list, because the steps happen in order -->
+        <ol class="steps">
+          <li class="step">
+            <h3>Send an enquiry</h3>
+            <p>Email us with the student's class, subject, and what they need help with.</p>
+          </li>
+          <li class="step">
+            <h3>Have a short chat</h3>
+            <p>We discuss goals, preferred timings, and whether online or in-person suits best.</p>
+          </li>
+          <li class="step">
+            <h3>Start learning</h3>
+            <p>Regular lessons begin with a clear plan, and progress is reviewed together.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== TUTOR INTRODUCTION ===== -->
+    <section id="tutor" class="section">
+      <div class="container tutor">
+        <!-- Placeholder "photo": initials in a circle, so no fake photo is used -->
+        <div class="tutor-avatar" aria-hidden="true">BP</div>
+        <div>
+          <h2>Meet Your Tutor</h2>
+          <p class="note">
+            This is a placeholder profile for a fictional business. Replace it with a real
+            tutor's name, background and verified qualifications before using this site for real.
+          </p>
+          <p>
+            Our tutor believes every student can improve with the right support. Lessons are
+            calm and encouraging, students are welcome to ask any question, and each topic is
+            broken into small, manageable parts.
+          </p>
+          <ul class="tick-list">
+            <li>Patient, step-by-step explanations</li>
+            <li>Lessons adapted to the student's pace</li>
+            <li>Regular practice and simple progress check-ins</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQs ===== -->
+    <!-- <details> and <summary> make open/close boxes with NO JavaScript needed -->
+    <section id="faqs" class="section section-alt">
+      <div class="container narrow">
+        <h2>Frequently Asked Questions</h2>
+
+        <details class="faq">
+          <summary>Which classes do you teach?</summary>
+          <p>Lessons are designed for students in Classes 6 to 12.</p>
+        </details>
+
+        <details class="faq">
+          <summary>Are lessons online or in person?</summary>
+          <p>Both options can be discussed during the first chat, depending on location and availability.</p>
+        </details>
+
+        <details class="faq">
+          <summary>How long is each lesson?</summary>
+          <p>A typical lesson is 60 minutes, but this can be adjusted to suit the student.</p>
+        </details>
+
+        <details class="faq">
+          <summary>How much do lessons cost?</summary>
+          <p>Fees depend on the subject, class and lesson format. Please send an enquiry for details.</p>
+        </details>
+
+        <details class="faq">
+          <summary>Is this a real business?</summary>
+          <p>No. BrightPath Learning is fictional and this website is a practice project.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section contact">
+      <div class="container narrow center">
+        <h2>Get in Touch</h2>
+        <p>
+          Have a question or want to book a first chat? Send an email with the student's
+          class and subject, and we'll reply as soon as we can.
+        </p>
+        <!-- mailto: opens the visitor's email app. example.com is a reserved placeholder domain. -->
+        <a class="btn btn-large"
+           href="mailto:hello@example.com?subject=Tutoring%20enquiry%20-%20BrightPath%20Learning">
+          Email hello@example.com
+        </a>
+        <p class="small">Placeholder address — replace it with a real email before publishing.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> BrightPath Learning — a fictional business created for a practice website.</p>
+      <p><a href="#home">Back to top ↑</a></p>
+    </div>
+  </footer>
+
+  <!-- "defer" means: load the script after the HTML is ready -->
+  <script src="script.js" defer></script>
+</body>
+</html>
