@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Roadster — The Art of Speed</title>
+    <meta
+      name="description"
+      content="A fan-made concept tribute to the Tesla Roadster: performance, design and official photography. Not affiliated with Tesla, Inc."
+    />
+    <link rel="icon" type="image/svg+xml" href="/roadster/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@300;500;600;700;800&display=swap"
+    />
+    <!-- Hero photograph: fetched before JS so it is on screen when the intro lifts -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      media="(min-width: 768px) and (orientation: landscape), (min-width: 1101px)"
+      imagesrcset="/roadster/images/hero-640.avif 640w, /roadster/images/hero-1280.avif 1280w, /roadster/images/hero-1920.avif 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      media="(max-width: 767px), (orientation: portrait) and (max-width: 1100px)"
+      imagesrcset="/roadster/images/hero-mobile-480.avif 480w, /roadster/images/hero-mobile-800.avif 800w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+    <script type="module" crossorigin src="/roadster/assets/index-B8Ze0O9A.js"></script>
+    <link rel="stylesheet" crossorigin href="/roadster/assets/index-EFckuPgO.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

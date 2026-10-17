@@ -1,0 +1,3 @@
+User-agent: *
+# DEMO: remove the next line once the café approves the site
+Disallow: /

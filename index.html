@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhairya | Websites for Local Businesses in Jaipur</title>
+  <meta name="description" content="Simple, fast, mobile-friendly websites for cafés, coaching institutes, tutors and small businesses in Jaipur." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231f2937'/><text x='50%' y='58%' text-anchor='middle' font-size='34' font-family='Georgia' fill='white'>D</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1f2937; --muted: #5b6472; --bg: #faf8f5; --card: #ffffff;
+      --line: #e7e2da; --accent: #b4532a; --accent-dark: #8f3f1d; --green: #1f7a4d;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+    img { max-width: 100%; height: auto; display: block; }
+    [hidden] { display: none !important; }
+    a { color: inherit; }
+    :focus-visible { outline: 2.5px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+    h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.15; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
+    .eyebrow { font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+    section { padding: 72px 0; }
+
+    /* Nav */
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+    .logo { font-family: Fraunces, Georgia, serif; font-size: 1.4rem; text-decoration: none; }
+    .logo span { color: var(--accent); }
+    nav ul { display: flex; gap: 22px; list-style: none; padding: 0; font-size: .95rem; }
+    nav ul a { text-decoration: none; color: var(--muted); }
+    nav ul a:hover { color: var(--ink); }
+    @media (max-width: 560px) { nav ul { display: none; } }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 600; font-size: .95rem; text-decoration: none; transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-dark); }
+    .btn-green { background: var(--green); color: #fff; }
+    .btn-outline { border: 1.5px solid var(--line); background: var(--card); }
+    .btn-outline:hover { border-color: var(--ink); }
+    .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* Hero */
+    .hero { padding-top: 56px; padding-bottom: 72px; }
+    .hero h1 { font-size: clamp(2.3rem, 6vw, 3.6rem); max-width: 760px; margin: 14px 0 18px; }
+    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 600px; margin-bottom: 30px; }
+
+    /* Work */
+    .project { background: var(--card); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; margin-top: 32px; }
+    .shots { display: grid; grid-template-columns: 1fr 190px; gap: 16px; padding: 20px; background: #f1ece5; align-items: end; }
+    .shots img { border-radius: 12px; box-shadow: 0 12px 30px -16px rgba(0,0,0,.45); }
+    .shots img.mobile { border-radius: 18px; border: 5px solid #1f2937; }
+    @media (max-width: 640px) { .shots { grid-template-columns: 1fr; } .shots img.mobile { max-width: 200px; margin: 0 auto; } }
+    .project-body { padding: 26px 26px 30px; }
+    .project-body h3 { font-size: 1.6rem; }
+    .tag { display: inline-block; font-size: .75rem; font-weight: 600; background: #f5e9e2; color: var(--accent-dark); padding: 4px 10px; border-radius: 999px; margin-bottom: 10px; }
+    .project-body p { color: var(--muted); margin: 8px 0 18px; max-width: 640px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin-bottom: 22px; }
+    .chips li { font-size: .85rem; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; }
+    .note { font-size: .8rem; color: var(--muted); margin-top: 14px; }
+
+    /* Features + package */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 28px; }
+    .feature { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+    .feature b { display: block; margin-bottom: 4px; }
+    .feature span { color: var(--muted); font-size: .92rem; }
+    .package { background: var(--ink); color: #fff; border-radius: 24px; padding: 36px 28px; margin-top: 28px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; }
+    @media (max-width: 760px) { .package { grid-template-columns: 1fr; } }
+    .price { font-family: Fraunces, Georgia, serif; font-size: 2.8rem; margin: 6px 0; }
+    .package ul { list-style: none; padding: 0; display: grid; gap: 10px; }
+    .package li::before { content: "✓"; color: #f0a37f; font-weight: 700; margin-right: 10px; }
+    .package .small { color: #c9ced6; font-size: .9rem; }
+
+    /* Steps */
+    .steps { counter-reset: s; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 28px; list-style: none; padding: 0; }
+    .steps li { counter-increment: s; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; color: var(--muted); font-size: .95rem; }
+    .steps li::before { content: counter(s); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #f5e9e2; color: var(--accent-dark); font-weight: 700; margin-bottom: 10px; }
+    .steps b { color: var(--ink); display: block; }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact p { color: var(--muted); margin: 12px auto 26px; max-width: 520px; }
+    .contact .btns { justify-content: center; }
+    footer { border-top: 1px solid var(--line); padding: 26px 0; font-size: .85rem; color: var(--muted); text-align: center; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+  </style>
+</head>
+<body>
+  <!--
+    =========================================================
+     EDIT YOUR DETAILS HERE (bottom of the page, in <script>):
+     - WhatsApp number, email, live demo link
+     The price is in the "Package" section below — search for ₹.
+    =========================================================
+  -->
+  <header class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#top">Dhairya<span>.</span></a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#package">Package</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow">Web developer · Jaipur</p>
+      <h1>Websites that bring customers through your door.</h1>
+      <p>I build simple, fast, mobile-friendly websites for cafés, coaching institutes, tutors and small businesses, so customers can find you, call you and visit you.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#work">See my work</a>
+        <a class="btn btn-outline" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="work" class="wrap" style="padding-top:0">
+      <p class="eyebrow">Work</p>
+      <h2>Recent projects</h2>
+
+      <article class="project">
+        <div class="shots">
+          <img src="images/cinnamon-desktop.webp" width="1400" height="875" alt="Cinnamon Cafe website on a laptop screen: a cozy café photo with the headline 'Your Cozy Corner in Jaipur'" loading="lazy" />
+          <img class="mobile" src="images/cinnamon-mobile.webp" width="600" height="1298" alt="Cinnamon Cafe website on a phone screen with menu, directions and call buttons" loading="lazy" />
+        </div>
+        <div class="project-body">
+          <span class="tag">Concept demo · Café</span>
+          <h3>Cinnamon Cafe, Jaipur</h3>
+          <p>A warm, photo-led website for a rooftop café: menu, gallery, reviews summary, Google Maps directions and one-tap calling.</p>
+          <ul class="chips">
+            <li>Mobile-friendly</li><li>Menu section</li><li>Map directions</li><li>Click-to-call</li><li>Fast loading</li>
+          </ul>
+          <div class="btns">
+            <a class="btn btn-primary" id="demo-link" hidden target="_blank" rel="noopener noreferrer">View live demo ↗</a>
+          </div>
+          <p class="note">Unofficial concept made to show my work. Not affiliated with Cinnamon Cafe.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="shots" style="grid-template-columns:1fr">
+          <img src="images/brightpath-desktop.webp" width="1400" height="875" alt="BrightPath Learning tutoring website with subjects and an enquiry button" loading="lazy" />
+        </div>
+        <div class="project-body">
+          <span class="tag">Practice project · Tutoring</span>
+          <h3>BrightPath Learning</h3>
+          <p>A clean one-page site for a tutoring business (fictional), with subjects, how classes work, tutor profile, FAQs and an enquiry section.</p>
+          <ul class="chips">
+            <li>Coaching / tutors</li><li>FAQs</li><li>Enquiry button</li><li>Mobile-friendly</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="wrap" style="padding-top:0">
+      <p class="eyebrow">What you get</p>
+      <h2>Everything a small business needs</h2>
+      <div class="grid">
+        <div class="feature"><b>📱 Works on every phone</b><span>Most customers find you on mobile. Your site looks great there.</span></div>
+        <div class="feature"><b>📞 One-tap call & WhatsApp</b><span>Customers reach you in a single tap.</span></div>
+        <div class="feature"><b>📍 Map directions</b><span>Google Maps location and a "Get Directions" button.</span></div>
+        <div class="feature"><b>📋 Menu / services / courses</b><span>Clearly laid out, and easy to update later.</span></div>
+        <div class="feature"><b>⚡ Fast & free hosting</b><span>No monthly hosting bill. Loads quickly.</span></div>
+        <div class="feature"><b>🔍 Google-friendly</b><span>Set up so people searching nearby can find you.</span></div>
+      </div>
+    </section>
+
+    <section id="package" class="wrap" style="padding-top:0">
+      <p class="eyebrow">Package</p>
+      <h2>One simple, clear package</h2>
+      <div class="package">
+        <div>
+          <h3 style="font-size:1.6rem">Basic Business Website</h3>
+          <p class="price">₹4,999</p>
+          <p class="small">One-time payment. 50% to start, 50% when you're happy. Ready in about 7 days.</p>
+          <div class="btns" style="margin-top:22px">
+            <a class="btn btn-primary contact-whatsapp" hidden target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
+          </div>
+        </div>
+        <ul>
+          <li>5 sections: Home, About, Menu/Services, Gallery, Contact</li>
+          <li>Mobile-friendly design</li>
+          <li>Call & WhatsApp buttons</li>
+          <li>Google Maps location & directions</li>
+          <li>Free hosting setup</li>
+          <li>2 rounds of changes</li>
+          <li>Small text/photo updates free for 1 month</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding-top:0">
+      <p class="eyebrow">How it works</p>
+      <h2>Four easy steps</h2>
+      <ol class="steps">
+        <li><b>Quick chat</b>We talk about your business and what you need.</li>
+        <li><b>Agree & start</b>We confirm the details, price and timeline in writing.</li>
+        <li><b>Preview</b>You see the site and ask for changes.</li>
+        <li><b>Go live</b>Your website goes online with your approval.</li>
+      </ol>
+    </section>
+
+    <section id="contact" class="wrap contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's build your website</h2>
+      <p>Message me on WhatsApp or email. I usually reply the same day.</p>
+      <div class="btns">
+        <a class="btn btn-green contact-whatsapp" id="whatsapp-link" hidden target="_blank" rel="noopener noreferrer">WhatsApp me</a>
+        <a class="btn btn-outline" id="email-link" hidden>Email me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Dhairya · Jaipur</footer>
+
+  <script>
+    // ========== EDIT YOUR DETAILS HERE ==========
+    const MY_DETAILS = {
+      whatsapp: '',   // country code + number, no spaces or +, e.g. '919876543210'
+      email: '',      // e.g. 'yourname@gmail.com'
+      cinnamonDemoUrl: 'https://dhairya-star.github.io/cinnamon-cafe/', // live demo link, e.g. 'https://cinnamon-cafe-demo.netlify.app'
+    };
+    // ============================================
+
+    const msg = encodeURIComponent("Hi Dhairya, I saw your portfolio and I'm interested in a website.");
+    const wa = MY_DETAILS.whatsapp ? `https://wa.me/${MY_DETAILS.whatsapp}?text=${msg}` : '';
+
+    // Hide any button whose link hasn't been filled in yet (no broken buttons)
+    function setLink(el, url) { if (url) { el.href = url; el.hidden = false; } }
+    document.querySelectorAll('.contact-whatsapp').forEach(el => setLink(el, wa));
+    setLink(document.getElementById('email-link'), MY_DETAILS.email ? `mailto:${MY_DETAILS.email}` : '');
+    setLink(document.getElementById('demo-link'), MY_DETAILS.cinnamonDemoUrl);
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
